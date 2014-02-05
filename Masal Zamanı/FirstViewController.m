@@ -238,8 +238,7 @@
 
 - (void)openStory:(UIButton *)sender
 {
-    [self performSegueWithIdentifier:@"OpenDayStory" sender:nil];
-    /*NSString *productIdentifier = [_inAppHelper productIdentifier:((Story *)fetchedDayStory.storyOfDay).text];
+    NSString *productIdentifier = [_inAppHelper productIdentifier:((Story *)fetchedDayStory.storyOfDay).text];
     _buyProduct = [_inAppHelper findProduct:[_inAppHelper productIdentifier:((Story *)fetchedDayStory.storyOfDay).text]];
                           
     if ([_inAppHelper productPurchased:productIdentifier]) {
@@ -259,7 +258,7 @@
         notification.tag = BUY_ALERT_VIEW_TAG;
         [notification show];
         notification = nil;
-    }*/
+    }
 }
 
 #pragma mark -
