@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12A269" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DayStory" representedClassName="DayStory" syncable="YES">
+        <attribute name="backgroundImage" attributeType="String" defaultValueString="DayStoryBackground1.jpg" syncable="YES"/>
+        <attribute name="barColor" attributeType="String" defaultValueString="1.0, 0.5, 0.75, 0.75" syncable="YES"/>
+        <attribute name="headerColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titleColor" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="storyOfDay" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Story" inverseName="nameOfDayStory" inverseEntity="Story" syncable="YES"/>
+    </entity>
+    <entity name="FirstLevelMenuItem" representedClassName="FirstLevelMenuItem" syncable="YES">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="category" inverseEntity="Story" syncable="YES"/>
+        <relationship name="upMenu" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="MenuItem" inverseName="downMenu" inverseEntity="MenuItem" syncable="YES"/>
+    </entity>
+    <entity name="MenuItem" representedClassName="MenuItem" syncable="YES">
+        <attribute name="name" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="downMenu" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FirstLevelMenuItem" inverseName="upMenu" inverseEntity="FirstLevelMenuItem" syncable="YES"/>
+    </entity>
+    <entity name="Story" representedClassName="Story" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="backgroundImage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" attributeType="String" syncable="YES"/>
+        <attribute name="textColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" indexed="YES" syncable="YES"/>
+        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FirstLevelMenuItem" inverseName="stories" inverseEntity="FirstLevelMenuItem" syncable="YES"/>
+        <relationship name="nameOfDayStory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DayStory" inverseName="storyOfDay" inverseEntity="DayStory" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DayStory" positionX="-7371" positionY="-4905" width="128" height="120"/>
+        <element name="FirstLevelMenuItem" positionX="-7344" positionY="-5157" width="128" height="88"/>
+        <element name="MenuItem" positionX="-7346" positionY="-5274" width="128" height="73"/>
+        <element name="Story" positionX="-7164" positionY="-5076" width="128" height="165"/>
+    </elements>
+</model>

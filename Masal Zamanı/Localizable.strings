@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Masal Zamanı
+
+  Created by Emrah Hisir on 1/18/13.
+  Copyright (c) 2013 Emrah Hisir. All rights reserved.
+*/
+
+"DayStoryTitle" = "Günün Masalı";
+"TopMenuTitle" = "Kategori";
+"FirstMenuTitle" = "Alt Kategori";
+"Stories" = "Masallar";
+"SearchTitle" = "Masal Ara";
+"Loading" = "Yükleniyor...";
+"Cancel" = "Vazgeç";
+"OK" = "Tamam";
+"BuyButton" = "Satın Al";
+"BuyProductContent" = "%@ masalını %0.2f TL karşılığında dinleyebilirsiniz";
+"ProductNotFound" = "Bu masal ürün listesinde değildir, lütfen başka bir masalı satın almayı deneyiniz.";
