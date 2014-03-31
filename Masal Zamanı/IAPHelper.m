@@ -49,8 +49,8 @@ static const NSString *PRODUCT_ID_PREFIX = @"ANKADev.MasalZamani.";
     
     if (urlData)
     {
-        int index1 = 0;
-        int index2 = [AppDelegate getIndexOfSubDataInData:urlData forData:[delimeter dataUsingEncoding:NSUTF8StringEncoding] startIndex:index1];
+        long index1 = 0;
+        long index2 = [AppDelegate getIndexOfSubDataInData:urlData forData:[delimeter dataUsingEncoding:NSUTF8StringEncoding] startIndex:(int)index1];
         NSRange dataRange = NSMakeRange(index1, index2);
         NSString *story = [[NSString alloc] initWithData:[urlData subdataWithRange:dataRange] encoding:NSUTF8StringEncoding];
         index1 = index2 + 1;
@@ -58,7 +58,7 @@ static const NSString *PRODUCT_ID_PREFIX = @"ANKADev.MasalZamani.";
         [result addObject:story];
         
         while (index1 < [urlData length]) {
-            index2 = [AppDelegate getIndexOfSubDataInData:urlData forData:[delimeter dataUsingEncoding:NSUTF8StringEncoding] startIndex:index1];
+            index2 = [AppDelegate getIndexOfSubDataInData:urlData forData:[delimeter dataUsingEncoding:NSUTF8StringEncoding] startIndex:(int)index1];
             dataRange = NSMakeRange(index1, index2 - index1);
             story = [[NSString alloc] initWithData:[urlData subdataWithRange:dataRange] encoding:NSUTF8StringEncoding];
             index1 = index2 + 1;
@@ -80,8 +80,8 @@ static const NSString *PRODUCT_ID_PREFIX = @"ANKADev.MasalZamani.";
     
     if (urlData)
     {
-        int index1 = 0;
-        int index2 = [AppDelegate getIndexOfSubDataInData:urlData forData:[delimeter dataUsingEncoding:NSUTF8StringEncoding] startIndex:index1];
+        long index1 = 0;
+        long index2 = [AppDelegate getIndexOfSubDataInData:urlData forData:[delimeter dataUsingEncoding:NSUTF8StringEncoding] startIndex:(int)index1];
         NSRange dataRange = NSMakeRange(index1, index2);
         NSString *story = [[NSString alloc] initWithData:[urlData subdataWithRange:dataRange] encoding:NSUTF8StringEncoding];
         index1 = index2 + 1;
@@ -89,7 +89,7 @@ static const NSString *PRODUCT_ID_PREFIX = @"ANKADev.MasalZamani.";
         [_purchasedProductIdentifiers addObject:story];
         
         while (index1 < [urlData length]) {
-            index2 = [AppDelegate getIndexOfSubDataInData:urlData forData:[delimeter dataUsingEncoding:NSUTF8StringEncoding] startIndex:index1];
+            index2 = [AppDelegate getIndexOfSubDataInData:urlData forData:[delimeter dataUsingEncoding:NSUTF8StringEncoding] startIndex:(int)index1];
             dataRange = NSMakeRange(index1, index2 - index1);
             story = [[NSString alloc] initWithData:[urlData subdataWithRange:dataRange] encoding:NSUTF8StringEncoding];
             index1 = index2 + 1;

@@ -16,8 +16,8 @@
     
     request.testDevices = [NSArray arrayWithObjects:
                            GAD_SIMULATOR_ID,
-                           @"e5e07c1a28123e1e776207eb8785bd45",
-                           @"72da38d627b8716a3a95ec7eec81c3b3",
+                           /*@"e5e07c1a28123e1e776207eb8785bd45",
+                           @"72da38d627b8716a3a95ec7eec81c3b3",*/
                            nil];
     
     CLLocation *location = [LocationManager sharedInstance].location;

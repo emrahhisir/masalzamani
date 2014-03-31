@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07E56EEE1678B70F0078A424"
-               BuildableName = "Masal Zaman&#305;.app"
-               BlueprintName = "Masal Zaman&#305;"
-               ReferencedContainer = "container:Masal Zaman&#305;.xcodeproj">
+               BuildableName = "Masal Zaman&#x131;.app"
+               BlueprintName = "Masal Zaman&#x131;"
+               ReferencedContainer = "container:Masal Zaman&#x131;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "07E56F231678B70F0078A424"
-               BuildableName = "Masal Zaman&#305;Tests.octest"
-               BlueprintName = "Masal Zaman&#305;Tests"
-               ReferencedContainer = "container:Masal Zaman&#305;.xcodeproj">
+               BuildableName = "Masal Zaman&#x131;Tests.xctest"
+               BlueprintName = "Masal Zaman&#x131;Tests"
+               ReferencedContainer = "container:Masal Zaman&#x131;.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07E56EEE1678B70F0078A424"
-            BuildableName = "Masal Zaman&#305;.app"
-            BlueprintName = "Masal Zaman&#305;"
-            ReferencedContainer = "container:Masal Zaman&#305;.xcodeproj">
+            BuildableName = "Masal Zaman&#x131;.app"
+            BlueprintName = "Masal Zaman&#x131;"
+            ReferencedContainer = "container:Masal Zaman&#x131;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -54,7 +54,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07E56EEE1678B70F0078A424"
-            BuildableName = "Masal Zaman&#305;.app"
-            BlueprintName = "Masal Zaman&#305;"
-            ReferencedContainer = "container:Masal Zaman&#305;.xcodeproj">
+            BuildableName = "Masal Zaman&#x131;.app"
+            BlueprintName = "Masal Zaman&#x131;"
+            ReferencedContainer = "container:Masal Zaman&#x131;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "07E56EEE1678B70F0078A424"
-            BuildableName = "Masal Zaman&#305;.app"
-            BlueprintName = "Masal Zaman&#305;"
-            ReferencedContainer = "container:Masal Zaman&#305;.xcodeproj">
+            BuildableName = "Masal Zaman&#x131;.app"
+            BlueprintName = "Masal Zaman&#x131;"
+            ReferencedContainer = "container:Masal Zaman&#x131;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

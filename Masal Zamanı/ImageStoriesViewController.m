@@ -383,7 +383,7 @@
         }
         
         [self.storyTitle setText:story.title];
-        imageNumber = [[NSString alloc] initWithFormat:@"%d / %d", self.carousel.currentItemIndex + 1, self.carousel.numberOfItems];
+        imageNumber = [[NSString alloc] initWithFormat:@"%ld / %ld", (long)self.carousel.currentItemIndex + 1, (long)self.carousel.numberOfItems];
         [self.imageNumber setText:imageNumber];
         
         [view update];

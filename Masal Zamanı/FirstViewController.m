@@ -29,7 +29,8 @@
 - (void)setDayOfStory;
 - (void)openStory:(UIButton *)sender;
 - (void)getProductList;
-- (void)checkNotification;
+- (BOOL)checkNotification;
+- (BOOL)checkNotificationOK;
 
 @end
 
@@ -52,8 +53,15 @@
         [self dataDownloadFailed:nil];
     }
     else {
+        // Adds free stories
+        [self initIAHelper];
+        
         [self getProductList];
-        [self checkNotification];
+        
+        // Checks notifications
+        if ([self checkNotification]) {
+            [self checkNotificationOK];
+        }
         
         loadOrder = E_LOAD_FIRST;
         
@@ -128,9 +136,9 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)checkNotification
+- (BOOL)checkNotification
 {
-    
+    BOOL isNotExist = YES;
     NSString *notificationFilePath = @"https://s3-us-west-2.amazonaws.com/masalzamani/Notification.dat";
     
     NSURL  *url = [NSURL URLWithString:notificationFilePath];
@@ -141,8 +149,8 @@
         NSString *contentTag = @"Content:";
         NSString *okButtonTag = @"OK:";
         
-        int contentIndex = [AppDelegate getIndexOfSubDataInData:urlData forData:[contentTag dataUsingEncoding:NSUTF8StringEncoding] startIndex:0];
-        int okIndex = [AppDelegate getIndexOfSubDataInData:urlData forData:[okButtonTag dataUsingEncoding:NSUTF8StringEncoding] startIndex:contentIndex];
+        long contentIndex = [AppDelegate getIndexOfSubDataInData:urlData forData:[contentTag dataUsingEncoding:NSUTF8StringEncoding] startIndex:0];
+        long okIndex = [AppDelegate getIndexOfSubDataInData:urlData forData:[okButtonTag dataUsingEncoding:NSUTF8StringEncoding] startIndex:(int)contentIndex];
         
         NSRange dataRange = NSMakeRange(contentIndex + 9, okIndex - 11);
         NSString *content = [[NSString alloc] initWithData:[urlData subdataWithRange:dataRange] encoding:NSUTF8StringEncoding];
@@ -156,8 +164,48 @@
         
         notification = nil;
         _noInternetConn = NO;
+        
+        isNotExist = NO;
     }
+    
+    return isNotExist;
 }
+
+- (BOOL)checkNotificationOK
+{
+    BOOL isNotExist = YES;
+    NSString *notificationFilePath = @"https://s3-us-west-2.amazonaws.com/masalzamani/NotificationOK.dat";
+    
+    NSURL  *url = [NSURL URLWithString:notificationFilePath];
+    NSData *urlData = [NSData dataWithContentsOfURL:url];
+    
+    if (urlData)
+    {
+        NSString *contentTag = @"Content:";
+        NSString *okButtonTag = @"OK:";
+        
+        long contentIndex = [AppDelegate getIndexOfSubDataInData:urlData forData:[contentTag dataUsingEncoding:NSUTF8StringEncoding] startIndex:0];
+        long okIndex = [AppDelegate getIndexOfSubDataInData:urlData forData:[okButtonTag dataUsingEncoding:NSUTF8StringEncoding] startIndex:(int)contentIndex];
+        
+        NSRange dataRange = NSMakeRange(contentIndex + 9, okIndex - 11);
+        NSString *content = [[NSString alloc] initWithData:[urlData subdataWithRange:dataRange] encoding:NSUTF8StringEncoding];
+        
+        dataRange = NSMakeRange(okIndex + 4, [urlData length] - okIndex - 4);
+        okButtonContent = [[NSString alloc] initWithData:[urlData subdataWithRange:dataRange] encoding:NSUTF8StringEncoding];
+        
+        UIAlertView *notification = [[UIAlertView alloc] initWithTitle:@"" message:content delegate:self cancelButtonTitle:@"Tamam" otherButtonTitles:nil, nil];
+        notification.tag = RATE_ALERT_VIEW_TAG;
+        [notification show];
+        
+        notification = nil;
+        _noInternetConn = NO;
+        
+        isNotExist = NO;
+    }
+    
+    return isNotExist;
+}
+
 
 #pragma mark -
 #pragma mark Fetch operations
@@ -238,6 +286,7 @@
 
 - (void)openStory:(UIButton *)sender
 {
+    //[self performSegueWithIdentifier:@"OpenDayStory" sender:nil];
     NSString *productIdentifier = [_inAppHelper productIdentifier:((Story *)fetchedDayStory.storyOfDay).text];
     _buyProduct = [_inAppHelper findProduct:[_inAppHelper productIdentifier:((Story *)fetchedDayStory.storyOfDay).text]];
                           
@@ -379,6 +428,29 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     
     [self performSegueWithIdentifier:@"OpenDayStory" sender:nil];
+}
+
+- (void)initIAHelper {
+    NSArray *tempStories = nil;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Story" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Create the sort descriptor.
+    NSSortDescriptor *titleDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:titleDescriptor, nil];
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Menu items fetch.
+    NSError *error;
+    tempStories = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        [_logger logMsg:[[NSString alloc] initWithFormat:@"FirstViewController:initIAHelper: %@, %@\r\n", error, [error userInfo]]];
+    }
+    
+    [[IAPHelper sharedInstance] purchasedProducts:tempStories];
 }
 
 @end

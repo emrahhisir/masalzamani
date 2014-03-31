@@ -45,9 +45,6 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // In App Purchase register
-    [IAPHelper sharedInstance];
-    
     // LocationManager Start
     [LocationManager sharedInstance];
     
@@ -69,9 +66,9 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
     }
     
     // For admin use. It initializes store file, fills database.
-    if ([self isStoreFileEmpty]) {
+    /*if ([self isStoreFileEmpty]) {
         [[AdminUtil alloc] initStoreFile:_managedObjectContext storeURL:remotePath];
-    }
+    }*/
 
     [self setNavigationBarColor];
     
@@ -80,9 +77,6 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
     
     // Push notification registration
     /*[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];*/
-    
-    // Adds free stories
-    [self initIAHelper];
     
     return YES;
 }
@@ -222,29 +216,6 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
     return YES;
 }
 
-- (void)initIAHelper {
-    NSArray *tempStories = nil;
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Story" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    // Create the sort descriptor.
-    NSSortDescriptor *titleDescriptor = [[NSSortDescriptor alloc] initWithKey:@"title" ascending:YES];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:titleDescriptor, nil];
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    // Menu items fetch.
-    NSError *error;
-    tempStories = [_managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (error) {
-        [_logger logMsg:[[NSString alloc] initWithFormat:@"AppDelegate:initIAHelper: %@, %@\r\n", error, [error userInfo]]];
-    }
-    
-    [[IAPHelper sharedInstance] purchasedProducts:tempStories];
-}
-
 - (NSURL *)createAndGetStoreDir
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -255,7 +226,7 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
     [remoteStorePath appendString:@"/StoryTime.sqlite"];
     
     // Download store file and copy
-    /*NSURL  *url = [NSURL URLWithString:remoteStorePath];
+    NSURL  *url = [NSURL URLWithString:remoteStorePath];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
     if (urlData)
     {
@@ -272,7 +243,7 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
         _noInternetConn = YES;
      
         [_logger close:[AppDelegate remotePath]];
-    }*/
+    }
     
     storeURL = [NSURL fileURLWithPath:localStorePath isDirectory:NO];
     
