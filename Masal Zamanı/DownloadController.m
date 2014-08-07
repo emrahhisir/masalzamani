@@ -70,7 +70,7 @@ static DownloadController *sharedInstance = nil;
     self.response = response;
     
     NSInteger code = [(NSHTTPURLResponse *)response statusCode];
-    if (code == 404)
+    if (code != 200)
     {
         DELEGATE_CALLBACK(urlNotValid:, nil);
     }

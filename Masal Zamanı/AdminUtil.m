@@ -908,29 +908,6 @@
     [newStory addCategoryObject:newMenuItemAnimal];
     [newStory addCategoryObject:newMenuItemDidactic];
     
-    // **** Story Of The Day ****
-    DayStory *newDayStory = (DayStory *)[NSEntityDescription
-                                         insertNewObjectForEntityForName:@"DayStory"
-                                         inManagedObjectContext:_managedObjectContext];
-    
-    // Blue color1
-    //newDayStory.titleColor = @"0.0,145.0,212.0";
-    // Blue color2
-    newDayStory.titleColor = @"0.0,50.0,255.0";
-    // Red color
-    //newDayStory.titleColor = @"255.0,0.0,50.0";
-    // White color
-    //newDayStory.headerColor = @"255.0,255.0,250.0";
-    newDayStory.headerColor = @"0.0,145.0,212.0";
-    /* Blue color navigation bar
-     newDayStory.barColor = @"0.0,0.6,0.82,0.75";
-     Pink color navigation bar
-     newDayStory.barColor = @"1.0,0.5,0.75,0.75";*/
-    newDayStory.barColor = @"1.0,0.5,0.75,0.75";
-    newDayStory.backgroundImage = [[_storeURL URLByAppendingPathComponent:@"BackgroundImage/MasalZamani_background.png"] absoluteString];
-    newDayStory.storyOfDay = newStory;
-    // **** Story Of The Day ****
-    
     newStory = (Story *)[NSEntityDescription
                          insertNewObjectForEntityForName:@"Story"
                          inManagedObjectContext:_managedObjectContext];
@@ -1020,6 +997,29 @@
     [newStory addCategoryObject:newMenuItem6AndOlderYears];
     [newStory addCategoryObject:newMenuItemAnimal];
     [newStory addCategoryObject:newMenuItemDidactic];
+    
+    // **** Story Of The Day ****
+    DayStory *newDayStory = (DayStory *)[NSEntityDescription
+                                         insertNewObjectForEntityForName:@"DayStory"
+                                         inManagedObjectContext:_managedObjectContext];
+    
+    // Blue color1
+    //newDayStory.titleColor = @"0.0,145.0,212.0";
+    // Blue color2
+    newDayStory.titleColor = @"0.0,50.0,255.0";
+    // Red color
+    //newDayStory.titleColor = @"255.0,0.0,50.0";
+    // White color
+    //newDayStory.headerColor = @"255.0,255.0,250.0";
+    newDayStory.headerColor = @"0.0,145.0,212.0";
+    /* Blue color navigation bar
+     newDayStory.barColor = @"0.0,0.6,0.82,0.75";
+     Pink color navigation bar
+     newDayStory.barColor = @"1.0,0.5,0.75,0.75";*/
+    newDayStory.barColor = @"1.0,0.5,0.75,0.75";
+    newDayStory.backgroundImage = [[_storeURL URLByAppendingPathComponent:@"BackgroundImage/MasalZamani_background.png"] absoluteString];
+    newDayStory.storyOfDay = newStory;
+    // **** Story Of The Day ****
     
     newStory = (Story *)[NSEntityDescription
                          insertNewObjectForEntityForName:@"Story"
