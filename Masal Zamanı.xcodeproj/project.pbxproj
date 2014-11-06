@@ -72,7 +72,7 @@
 		B13AD826185750DD006F338F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B13AD825185750DD006F338F /* LocationManager.m */; };
 		B13AD82818575164006F338F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13AD82718575164006F338F /* CoreLocation.framework */; };
 		B15359C01832C6CD00AF5AF9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15359BF1832C6CD00AF5AF9 /* iAd.framework */; };
-		B15EC2D618E9599400B73511 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B15EC2D518E9599400B73511 /* libGoogleAdMobAds.a */; };
+		B1BA60BD1A0BA1F70072D4EB /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA60BC1A0BA1F70072D4EB /* libGoogleAdMobAds.a */; };
 		B1F5292318E964F2000041FB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1F5292218E964F2000041FB /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
@@ -186,7 +186,7 @@
 		B13AD82718575164006F338F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B15359BF1832C6CD00AF5AF9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		B15484DD17CCBE0E008460E8 /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
-		B15EC2D518E9599400B73511 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = "../../Documents/Library/GoogleAdMobAdsSdkiOS-6.8.0/libGoogleAdMobAds.a"; sourceTree = "<group>"; };
+		B1BA60BC1A0BA1F70072D4EB /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = "../../Documents/Library/GoogleMobileAdsSdkiOS-6.12.0/libGoogleAdMobAds.a"; sourceTree = "<group>"; };
 		B1F5292218E964F2000041FB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -205,8 +205,8 @@
 				07AA91101780111400D1EE7C /* StoreKit.framework in Frameworks */,
 				0783DB171690EF8E008F3E17 /* CoreAudio.framework in Frameworks */,
 				0783DB151690EF85008F3E17 /* CoreData.framework in Frameworks */,
-				B15EC2D618E9599400B73511 /* libGoogleAdMobAds.a in Frameworks */,
 				07E56EF41678B70F0078A424 /* UIKit.framework in Frameworks */,
+				B1BA60BD1A0BA1F70072D4EB /* libGoogleAdMobAds.a in Frameworks */,
 				07E56EF61678B70F0078A424 /* Foundation.framework in Frameworks */,
 				07E56EF81678B70F0078A424 /* CoreGraphics.framework in Frameworks */,
 				07E9E0C1172FF98200441F1A /* CFNetwork.framework in Frameworks */,
@@ -293,8 +293,8 @@
 		07E56EF21678B70F0078A424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1BA60BC1A0BA1F70072D4EB /* libGoogleAdMobAds.a */,
 				B1F5292218E964F2000041FB /* CoreTelephony.framework */,
-				B15EC2D518E9599400B73511 /* libGoogleAdMobAds.a */,
 				B13AD82718575164006F338F /* CoreLocation.framework */,
 				B12FB2CC183BECB500E3F382 /* SystemConfiguration.framework */,
 				B12FB2CA183BEC7600E3F382 /* MessageUI.framework */,
@@ -670,13 +670,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/emrah/Documents/Library/GoogleAdMobAdsSdkiOS-6.8.0",
+					"/Users/emrah/Documents/Library/GoogleMobileAdsSdkiOS-6.12.0",
 				);
 				INFOPLIST_FILE = "Masal Zamanı/Masal Zamanı-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/emrah/Documents/Library/GoogleAdMobAdsSdkiOS-6.8.0",
+					"/Users/emrah/Documents/Library/GoogleMobileAdsSdkiOS-6.12.0",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -703,13 +704,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/emrah/Documents/Library/GoogleAdMobAdsSdkiOS-6.8.0",
+					"/Users/emrah/Documents/Library/GoogleMobileAdsSdkiOS-6.12.0",
 				);
 				INFOPLIST_FILE = "Masal Zamanı/Masal Zamanı-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/emrah/Documents/Library/GoogleAdMobAdsSdkiOS-6.8.0",
+					"/Users/emrah/Documents/Library/GoogleMobileAdsSdkiOS-6.12.0",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

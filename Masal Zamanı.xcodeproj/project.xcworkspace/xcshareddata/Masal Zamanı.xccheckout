@@ -12,20 +12,24 @@
 	<dict>
 		<key>3E4D190A-E2B1-4CB0-BBFC-80C581EC02AC</key>
 		<string>https://bitbucket.org/memonary/masalzamani.git</string>
+		<key>A0AE1FD92CA09878471554EE288D3F0D10AC4F64</key>
+		<string>https://bitbucket.org/memonary/masalzamani.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Masal Zamanı.xcodeproj/project.xcworkspace</string>
+	<string>Masal Zamanı.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3E4D190A-E2B1-4CB0-BBFC-80C581EC02AC</key>
+		<string>../../../Masal Zamanı</string>
+		<key>A0AE1FD92CA09878471554EE288D3F0D10AC4F64</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://bitbucket.org/memonary/masalzamani.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3E4D190A-E2B1-4CB0-BBFC-80C581EC02AC</string>
+	<string>A0AE1FD92CA09878471554EE288D3F0D10AC4F64</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>3E4D190A-E2B1-4CB0-BBFC-80C581EC02AC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Masal Zamanı</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A0AE1FD92CA09878471554EE288D3F0D10AC4F64</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Masal%20Zaman%C4%B1</string>
 		</dict>
 	</array>
 </dict>
