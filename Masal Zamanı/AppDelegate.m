@@ -66,9 +66,9 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
     }
     
     // For admin use. It initializes store file, fills database.
-    if ([self isStoreFileEmpty]) {
+    /*if ([self isStoreFileEmpty]) {
         [[AdminUtil alloc] initStoreFile:_managedObjectContext storeURL:remotePath];
-    }
+    }*/
 
     [self setNavigationBarColor];
     
@@ -226,7 +226,7 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
     [remoteStorePath appendString:@"/StoryTime.sqlite"];
     
     // Download store file and copy
-    /*NSURL  *url = [NSURL URLWithString:remoteStorePath];
+    NSURL  *url = [NSURL URLWithString:remoteStorePath];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
     if (urlData)
     {
@@ -243,7 +243,7 @@ static const NSInteger NO_INTERNET_ALERT_VIEW_TAG = 2628;
         _noInternetConn = YES;
      
         [_logger close:[AppDelegate remotePath]];
-    }*/
+    }
     
     storeURL = [NSURL fileURLWithPath:localStorePath isDirectory:NO];
     

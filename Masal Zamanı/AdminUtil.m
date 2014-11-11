@@ -447,25 +447,6 @@
     [newStory addCategoryObject:newMenuItemDidactic];
     [newStory addCategoryObject:newMenuItemAnimal];
     
-    newStory = (Story *)[NSEntityDescription
-                         insertNewObjectForEntityForName:@"Story"
-                         inManagedObjectContext:_managedObjectContext];
-    newStory.title = @"Badem Ağacı";
-    newStory.text = [[_storeURL URLByAppendingPathComponent:@"Body/BademAgaci.dat"]
-                     absoluteString];
-    newStory.textColor = @"0.0,0.0,0.0";
-    newStory.image = [[_storeURL URLByAppendingPathComponent:@"Image/BademAgaci.jpg"]
-                      absoluteString];
-    newStory.backgroundImage = [[_storeURL URLByAppendingPathComponent:@"BackgroundImage/Background31.png"]
-                                absoluteString];
-    newStory.audio = [[_storeURL URLByAppendingPathComponent:@"Audio/BademAgaci.m4a"]
-                      absoluteString];
-    [newStory addCategoryObject:newMenuItem24Years];
-    [newStory addCategoryObject:newMenuItem46Years];
-    [newStory addCategoryObject:newMenuItem6AndOlderYears];
-    [newStory addCategoryObject:newMenuItemDidactic];
-    [newStory addCategoryObject:newMenuItemNature];
-    
     // **** Story Of The Day ****
     DayStory *newDayStory = (DayStory *)[NSEntityDescription
                                          insertNewObjectForEntityForName:@"DayStory"
@@ -488,6 +469,25 @@
     newDayStory.backgroundImage = [[_storeURL URLByAppendingPathComponent:@"BackgroundImage/MasalZamani_background.png"] absoluteString];
     newDayStory.storyOfDay = newStory;
     // **** Story Of The Day ****
+    
+    newStory = (Story *)[NSEntityDescription
+                         insertNewObjectForEntityForName:@"Story"
+                         inManagedObjectContext:_managedObjectContext];
+    newStory.title = @"Badem Ağacı";
+    newStory.text = [[_storeURL URLByAppendingPathComponent:@"Body/BademAgaci.dat"]
+                     absoluteString];
+    newStory.textColor = @"0.0,0.0,0.0";
+    newStory.image = [[_storeURL URLByAppendingPathComponent:@"Image/BademAgaci.jpg"]
+                      absoluteString];
+    newStory.backgroundImage = [[_storeURL URLByAppendingPathComponent:@"BackgroundImage/Background31.png"]
+                                absoluteString];
+    newStory.audio = [[_storeURL URLByAppendingPathComponent:@"Audio/BademAgaci.m4a"]
+                      absoluteString];
+    [newStory addCategoryObject:newMenuItem24Years];
+    [newStory addCategoryObject:newMenuItem46Years];
+    [newStory addCategoryObject:newMenuItem6AndOlderYears];
+    [newStory addCategoryObject:newMenuItemDidactic];
+    [newStory addCategoryObject:newMenuItemNature];
     
     newStory = (Story *)[NSEntityDescription
                          insertNewObjectForEntityForName:@"Story"
