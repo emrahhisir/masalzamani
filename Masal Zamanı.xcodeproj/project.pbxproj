@@ -659,8 +659,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Emrah Hisir (369325GKQF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Emrah Hisir (369325GKQF)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Documents/Library/aws-ios-sdk-1.6.1\"",
@@ -681,8 +681,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2E022263-7565-4A09-9046-E0F53823BF3E";
+				PROVISIONING_PROFILE = "8E3A0C94-8AD4-4A0A-A32B-717C74D915AF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8E3A0C94-8AD4-4A0A-A32B-717C74D915AF";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -693,8 +693,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Emrah Hisir (WHLKMJ86XR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Emrah Hisir (WHLKMJ86XR)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../Documents/Library/aws-ios-sdk-1.6.1\"",
@@ -715,8 +715,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7F467B22-EA62-41C9-BA8B-EA8A164CD50C";
+				PROVISIONING_PROFILE = "8E3A0C94-8AD4-4A0A-A32B-717C74D915AF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8E3A0C94-8AD4-4A0A-A32B-717C74D915AF";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
