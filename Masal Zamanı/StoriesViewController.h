@@ -11,6 +11,5 @@
 @interface StoriesViewController : UITableViewController
 
 @property (nonatomic, strong) NSArray *stories;
-@property (nonatomic, strong) NSString *title;
 
 @end

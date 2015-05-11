@@ -60,6 +60,9 @@
 		07EBD82816CE9AB6005C6C4C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EBD82616CE9AB6005C6C4C /* MainStoryboard_iPhone.storyboard */; };
 		07EBD82A16CE9ADF005C6C4C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07EBD82916CE9ADF005C6C4C /* InfoPlist.strings */; };
 		07F9EE2516A07BB200CA1C56 /* DayStoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F9EE2416A07BB200CA1C56 /* DayStoryViewController.m */; };
+		B11588F11A97F6CC0097530A /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B11588F01A97F6CC0097530A /* libGoogleAdMobAds.a */; };
+		B11588F41A9885DD0097530A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11588F21A9885DD0097530A /* EventKit.framework */; };
+		B11588F51A9885DD0097530A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11588F31A9885DD0097530A /* EventKitUI.framework */; };
 		B122FFB617F4EBCA00417053 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B122FFB517F4EBCA00417053 /* Images-2.xcassets */; };
 		B12FB2C3183BBB9600E3F382 /* GADInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12FB2C2183BBB9600E3F382 /* GADInterstitialViewController.m */; };
 		B12FB2CB183BEC7600E3F382 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12FB2CA183BEC7600E3F382 /* MessageUI.framework */; };
@@ -72,7 +75,6 @@
 		B13AD826185750DD006F338F /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B13AD825185750DD006F338F /* LocationManager.m */; };
 		B13AD82818575164006F338F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13AD82718575164006F338F /* CoreLocation.framework */; };
 		B15359C01832C6CD00AF5AF9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15359BF1832C6CD00AF5AF9 /* iAd.framework */; };
-		B1BA60BD1A0BA1F70072D4EB /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA60BC1A0BA1F70072D4EB /* libGoogleAdMobAds.a */; };
 		B1F5292318E964F2000041FB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1F5292218E964F2000041FB /* CoreTelephony.framework */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +170,9 @@
 		07EBD82916CE9ADF005C6C4C /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		07F9EE2316A07BB200CA1C56 /* DayStoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayStoryViewController.h; sourceTree = "<group>"; };
 		07F9EE2416A07BB200CA1C56 /* DayStoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayStoryViewController.m; sourceTree = "<group>"; };
+		B11588F01A97F6CC0097530A /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = "../../Library/Mobile Documents/com~apple~CloudDocs/Library/GoogleMobileAdsSdkiOS-6.12.0/libGoogleAdMobAds.a"; sourceTree = "<group>"; };
+		B11588F21A9885DD0097530A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		B11588F31A9885DD0097530A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		B122FFB517F4EBCA00417053 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		B12FB2C1183BBB9600E3F382 /* GADInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialViewController.h; sourceTree = "<group>"; };
 		B12FB2C2183BBB9600E3F382 /* GADInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADInterstitialViewController.m; sourceTree = "<group>"; };
@@ -186,7 +191,6 @@
 		B13AD82718575164006F338F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B15359BF1832C6CD00AF5AF9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		B15484DD17CCBE0E008460E8 /* DownloadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
-		B1BA60BC1A0BA1F70072D4EB /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAdMobAds.a; path = "../../Documents/Library/GoogleMobileAdsSdkiOS-6.12.0/libGoogleAdMobAds.a"; sourceTree = "<group>"; };
 		B1F5292218E964F2000041FB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -195,6 +199,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B11588F41A9885DD0097530A /* EventKit.framework in Frameworks */,
+				B11588F51A9885DD0097530A /* EventKitUI.framework in Frameworks */,
+				B11588F11A97F6CC0097530A /* libGoogleAdMobAds.a in Frameworks */,
 				B1F5292318E964F2000041FB /* CoreTelephony.framework in Frameworks */,
 				B13AD82818575164006F338F /* CoreLocation.framework in Frameworks */,
 				B12FB2CF183BED2200E3F382 /* AVFoundation.framework in Frameworks */,
@@ -206,7 +213,6 @@
 				0783DB171690EF8E008F3E17 /* CoreAudio.framework in Frameworks */,
 				0783DB151690EF85008F3E17 /* CoreData.framework in Frameworks */,
 				07E56EF41678B70F0078A424 /* UIKit.framework in Frameworks */,
-				B1BA60BD1A0BA1F70072D4EB /* libGoogleAdMobAds.a in Frameworks */,
 				07E56EF61678B70F0078A424 /* Foundation.framework in Frameworks */,
 				07E56EF81678B70F0078A424 /* CoreGraphics.framework in Frameworks */,
 				07E9E0C1172FF98200441F1A /* CFNetwork.framework in Frameworks */,
@@ -293,7 +299,9 @@
 		07E56EF21678B70F0078A424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B1BA60BC1A0BA1F70072D4EB /* libGoogleAdMobAds.a */,
+				B11588F21A9885DD0097530A /* EventKit.framework */,
+				B11588F31A9885DD0097530A /* EventKitUI.framework */,
+				B11588F01A97F6CC0097530A /* libGoogleAdMobAds.a */,
 				B1F5292218E964F2000041FB /* CoreTelephony.framework */,
 				B13AD82718575164006F338F /* CoreLocation.framework */,
 				B12FB2CC183BECB500E3F382 /* SystemConfiguration.framework */,
@@ -659,29 +667,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Emrah Hisir (369325GKQF)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Emrah Hisir (369325GKQF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Documents/Library/aws-ios-sdk-1.6.1\"",
+					"\"/Users/emrah/Library/Mobile Documents/com~apple~CloudDocs/Library/aws-ios-sdk-1.6.1\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Masal Zamanı/Masal Zamanı-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/emrah/Documents/Library/GoogleMobileAdsSdkiOS-6.12.0",
+					"\"/Users/emrah/Library/Mobile Documents/com~apple~CloudDocs/Library/GoogleMobileAdsSdkiOS-6.12.0\"",
 				);
 				INFOPLIST_FILE = "Masal Zamanı/Masal Zamanı-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/emrah/Documents/Library/GoogleAdMobAdsSdkiOS-6.8.0",
-					"/Users/emrah/Documents/Library/GoogleMobileAdsSdkiOS-6.12.0",
+					"\"/Users/emrah/Library/Mobile Documents/com~apple~CloudDocs/Library/GoogleMobileAdsSdkiOS-6.12.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8E3A0C94-8AD4-4A0A-A32B-717C74D915AF";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8E3A0C94-8AD4-4A0A-A32B-717C74D915AF";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -693,29 +700,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Emrah Hisir (WHLKMJ86XR)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Emrah Hisir (WHLKMJ86XR)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Documents/Library/aws-ios-sdk-1.6.1\"",
+					"\"/Users/emrah/Library/Mobile Documents/com~apple~CloudDocs/Library/aws-ios-sdk-1.6.1\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Masal Zamanı/Masal Zamanı-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/emrah/Documents/Library/GoogleMobileAdsSdkiOS-6.12.0",
+					"\"/Users/emrah/Library/Mobile Documents/com~apple~CloudDocs/Library/GoogleMobileAdsSdkiOS-6.12.0\"",
 				);
 				INFOPLIST_FILE = "Masal Zamanı/Masal Zamanı-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/emrah/Documents/Library/GoogleAdMobAdsSdkiOS-6.8.0",
-					"/Users/emrah/Documents/Library/GoogleMobileAdsSdkiOS-6.12.0",
+					"\"/Users/emrah/Library/Mobile Documents/com~apple~CloudDocs/Library/GoogleMobileAdsSdkiOS-6.12.0\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8E3A0C94-8AD4-4A0A-A32B-717C74D915AF";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8E3A0C94-8AD4-4A0A-A32B-717C74D915AF";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

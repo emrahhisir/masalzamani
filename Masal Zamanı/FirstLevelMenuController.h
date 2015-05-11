@@ -13,6 +13,5 @@
 @interface FirstLevelMenuController : GADBannerTableViewController<DisplayerController>
 
 @property (nonatomic, strong) NSArray *menus;
-@property (nonatomic, strong) NSString *title;
 
 @end

@@ -193,8 +193,8 @@ static const NSString *PRODUCT_ID_PREFIX = @"ANKADev.MasalZamani.";
 
 - (void)requestProductsWithCompletionHandler:(RequestProductsCompletionHandler)completionHandler
 {
-    if (_products != nil) {
-        //_completionHandler = [completionHandler copy];
+    if (_products == nil) {
+        _completionHandler = [completionHandler copy];
         _completionHandler(YES, _products);
     }
     else {
