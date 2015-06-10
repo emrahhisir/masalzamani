@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <GADBannerView.h>
-#import "GADInterstitialViewController.h"
+#import "MZGADInterstitialViewController.h"
 
-@interface GADBannerViewController : GADInterstitialViewController<GADBannerViewDelegate>
+@interface GADBannerViewController : MZGADInterstitialViewController<GADBannerViewDelegate>
 
 @end

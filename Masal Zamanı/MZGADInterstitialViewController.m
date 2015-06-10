@@ -6,28 +6,27 @@
 //  Copyright (c) 2013 Emrah Hisir. All rights reserved.
 //
 
-#import "GADInterstitialViewController.h"
+#import "MZGADInterstitialViewController.h"
 #import "DayStoryViewController.h"
 #import "LocationManager.h"
 #import "GADRequestFactory.h"
 
 #define INTERSTITIAL_AD_UNIT_ID @"ca-app-pub-1796711852238712/2919281782"
 
-@interface GADInterstitialViewController ()
+@interface MZGADInterstitialViewController ()
 
 @property (nonatomic, strong) GADInterstitial *interstitial;
 
 @end
 
-@implementation GADInterstitialViewController
+@implementation MZGADInterstitialViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
-    _interstitial = [[GADInterstitial alloc] init];
+    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:INTERSTITIAL_AD_UNIT_ID];
     
-    _interstitial.adUnitID = self.interstitialAdUnitID;
     _interstitial.delegate = self;
     [_interstitial loadRequest:[GADRequestFactory request]];
 }

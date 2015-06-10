@@ -11,7 +11,6 @@
 #import <StoreKit/StoreKit.h>
 #import "AppDelegate.h"
 #import "Story.h"
-#import "AWSObjectManager.h"
 
 NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurchasedNotification";
 NSString *const IAPHelperProductRestoredNotification = @"IAPHelperProductRestoredNotification";
@@ -193,7 +192,7 @@ static const NSString *PRODUCT_ID_PREFIX = @"ANKADev.MasalZamani.";
 
 - (void)requestProductsWithCompletionHandler:(RequestProductsCompletionHandler)completionHandler
 {
-    if (_products == nil) {
+    if (_products != nil) {
         _completionHandler = [completionHandler copy];
         _completionHandler(YES, _products);
     }

@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "DisplayerController.h"
-#import "GADInterstitialViewController.h"
+#import "MZGADInterstitialViewController.h"
 
-@interface DayStoryViewController : GADInterstitialViewController<AVAudioPlayerDelegate, DisplayerController>
+@interface DayStoryViewController : MZGADInterstitialViewController<AVAudioPlayerDelegate, DisplayerController>
 
 @property (nonatomic, strong) NSString *textFilePath;
 @property (nonatomic, strong) NSString *audioFilePath;

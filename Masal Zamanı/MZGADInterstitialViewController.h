@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "GADInterstitial.h"
 
-@interface GADInterstitialViewController : UIViewController<GADInterstitialDelegate>
+@interface MZGADInterstitialViewController : UIViewController<GADInterstitialDelegate>
 
 @end

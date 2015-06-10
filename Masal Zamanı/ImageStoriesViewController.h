@@ -11,9 +11,9 @@
 #import "DisplayerController.h"
 #import "iCarousel.h"
 #import "ReflectionView.h"
-#import "GADInterstitialViewController.h"
+#import "MZGADInterstitialViewController.h"
 
-@interface ImageStoriesViewController : GADInterstitialViewController <DisplayerController, iCarouselDataSource, iCarouselDelegate, UIAlertViewDelegate>
+@interface ImageStoriesViewController : MZGADInterstitialViewController <DisplayerController, iCarouselDataSource, iCarouselDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSString *navTitle;
 @property (nonatomic, strong) NSArray *stories;
